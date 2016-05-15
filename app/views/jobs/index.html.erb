@@ -1,0 +1,10 @@
+<%= link_to 'Add Employee', new_job_path %>
+<h1> Listing Employee </h1>
+<% @jobs.each do |job| %>
+<br>
+<%= job.name %>
+<br>
+<%= link_to('Edit', edit_job_path(job.id)) %>
+<%= link_to 'Show', job_path(job.id) %>
+<%= link_to('Destroy', job_path(job.id), method: :delete) %>
+<% end %>

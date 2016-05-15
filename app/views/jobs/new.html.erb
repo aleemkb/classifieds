@@ -1,0 +1,28 @@
+<%= form_for :job, url:jobs_path do |f| %>
+<% if @job.errors.any? %>
+<%= @job.errors.full_messages %>
+<% end %>
+<br>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :age %>
+ <%= f.select :age, [['Twenty years', 20], ['Thirty years', 30], ['Forty years', 40], ['Fifty years', 50], ['Sixty years', 60]] %>
+ <br>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<br>
+<%= f.label :contact_number %>
+<%= f.text_field :contact_number %>
+<br>
+<%= f.check_box :agree %>
+<%= f.label :agree %>
+<br>
+<%= f.radio_button :gender, 'Male' %>
+<%= f.label :Male %>
+<br>
+<%= f.radio_button :gender, 'Female'%>
+<%= f.label :Female %>
+<br>
+<%= f.submit 'Save Information' %>
+<% end %>

@@ -1,0 +1,23 @@
+<br>
+<%= form_for @job, url: {action: "update"} do |f| %>
+ <%= f.text_field :name %>
+ <br>
+ <%= f.text_field :age %>
+ <br>
+ <%= f.text_field :address %>
+ <br>
+ <%= f.text_field :contact_number %>
+ <br>
+ <%= f.check_box :agree %>
+ <%= f.label :agree %>
+ <br>
+ <%= f.radio_button :gender, 'Male' %>
+ <%= f.label :Male %>
+ <br>
+ <%= f.radio_button :gender, 'Female'%>
+ <%= f.label :Female %>
+ <br>
+ <%= f.submit 'Edit' %>
+ <% end %>
+
+ <%= link_to 'Back', job_path %>
