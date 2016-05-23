@@ -2,6 +2,10 @@
 <br>
 <%= page_entries_info @jobs %>
 <br>
-<h1>Employees</h1>
+<h1 class='red'>Employees</h1>
 <%= render partial: "job", collection: @jobs %>
 <%= paginate @jobs %>
+
+<%= image_tag('abc.jpg', alt: 'Smiley Face') %>
+<%= image_tag('car.jpg', alt: 'Bmw') %>
+<%= image_tag('tree.jpg', alt: 'Tree') %>
