@@ -13,14 +13,8 @@
 
 ActiveRecord::Schema.define(version: 20160515090356) do
 
-  create_table "jangs", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.string   "address"
-    t.integer  "contact_number"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "jobs", force: :cascade do |t|
     t.string   "name"
