@@ -1,10 +1,7 @@
-<%= link_to 'Add Employee', new_job_path %>
+<%= link_to 'Add Employee', new_job_path, class: 'btn btn-primary' %>
 <br>
 <%= page_entries_info @jobs %>
 <br>
 <h1 class='red'>Employees</h1>
 <%= render partial: "job", collection: @jobs %>
 <%= paginate @jobs %>
-
-<%= image_tag('abc.jpg', alt: 'Smiley Face') %>
-<%= image_tag('car.jpg', alt: 'Bmw') %>

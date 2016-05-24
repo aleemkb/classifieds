@@ -42,10 +42,14 @@ class JobsController < ApplicationController
    redirect_to jobs_path
  end
 
+ def download
+   @job = Job.find(params[:id])
 
+   send_file(@job.avatar.path)
+ end
 
   private
   def job_params
-  params.require(:job).permit(:name, :age, :address, :contact_number, :agree, :gender)
+  params.require(:job).permit(:name, :age, :address, :contact_number, :agree, :gender, :avatar)
   end
 end

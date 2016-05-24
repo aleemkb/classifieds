@@ -6,6 +6,7 @@ class Job < ActiveRecord::Base
   validates :contact_number, presence: true
 
 
+    has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   def maxima(a, b)
   end
 end

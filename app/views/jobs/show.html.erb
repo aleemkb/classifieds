@@ -9,5 +9,9 @@ Address:
 <br>
 contact_number:
 <%= @job.contact_number %>
+<br>
+<%= image_tag @job.avatar.url %>
+<%= image_tag @job.avatar.url(:medium) %>
+<%= image_tag @job.avatar.url(:thumb) %>
 
 <%= link_to 'Back', jobs_path %>

@@ -2,7 +2,7 @@
 <% if @job.errors.any? %>
 <%= @job.errors.full_messages %>
 <% end %>
-<br>
+ <br>
 <%= f.label :name %>
 <%= f.text_field :name %>
 <br>
@@ -14,6 +14,8 @@
 <br>
 <%= f.label :contact_number %>
 <%= f.text_field :contact_number %>
+<br>
+<%= f.file_field :avatar %>
 <br>
 <%= f.check_box :agree %>
 <%= f.label :agree %>
